@@ -150,6 +150,38 @@ python3 complex_yahoo_agent.py
 
 ---
 
+## Performance Tips
+
+### Large inboxes
+Fetching emails is the main bottleneck — each email requires a separate network 
+request to the mail server, which adds up quickly:
+
+| Emails | Estimated fetch time |
+|--------|---------------------|
+| 100    | ~30 seconds         |
+| 500    | ~2-4 minutes        |
+| 1,000  | ~5-8 minutes        |
+| 5,000  | ~30-40 minutes      |
+
+### Recommended approach for large cleanups
+Process your inbox **month by month** rather than setting one large date range.
+This is safer, more controlled, and easier to stop and resume:
+
+```python
+# Run once for each month
+start_date = datetime(2024, 1, 1)
+end_date = datetime(2024, 2, 1)
+
+# Then update and run again
+start_date = datetime(2024, 2, 1)
+end_date = datetime(2024, 3, 1)
+```
+
+This way if something goes wrong, you only lose progress on one month, not 
+the entire cleanup.
+
+---
+
 ## Important Note
 This agent reads the first 300 characters of each email's body. If your inbox 
 contains emails with sensitive information (passwords, banking details), adjust 
