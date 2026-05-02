@@ -248,7 +248,7 @@ def process_results(batch, results, mail, counters):
             # Auto-delete only when model is highly confident
             # Set HERE the confidence threshold to 85 or 80 for more aggressive 
             # auto-deletion
-            if confidence >= 80:
+            if confidence >= 90:
                 # Move email to Trash (not permanent deletion)
                 copy_result = mail.uid("COPY", e["id"], TRASH_FOLDER)
 
