@@ -1,7 +1,7 @@
 # Email Cleanup Agent
 
 ## The Story
-My mother-in-law was facing Yahoo's new 15 GB storage limit (deadline: 5th May) 
+My mother-in-law was facing Yahoo's new 15 GB storage limit (deadline: 5th May 2026) 
 with a 32 GB inbox containing 32,000 emails. Manually reviewing each one was 
 exhausting and time-consuming — so I built her an AI agent to do it.
 
