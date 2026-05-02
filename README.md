@@ -1,12 +1,9 @@
 # Email Cleanup Agent
 
 ## The Story
-My mother-in-law was facing Yahoo's new 15 GB storage limit (deadline: 5th May 2026) 
-with a 32 GB inbox containing 32,000 emails. Manually reviewing each one was 
-exhausting and time-consuming — so I built her an AI agent to do it.
+My mother-in-law was facing Yahoo's new 15 GB storage limit (deadline: 5th May 2026) with a 32 GB inbox containing 32,000 emails. Manually reviewing each one was exhausting and time-consuming — so I built her an AI agent to do it.
 
-Along the way, I discovered that Gmail and Yahoo handle email deletion differently,
-which led me to build two separate agents.
+First, I built and tested the agent on my own Gmail inbox, and then adapted it to Yahoo, discovering that the two providers handle deletion differently.
 
 ---
 
